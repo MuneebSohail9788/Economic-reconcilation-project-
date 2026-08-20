@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detect contract, amendment, invoice, and delivery breaks before they cost your business money.">
+    <meta name="keywords" content="finance, reconciliation, contract, invoice, AI, automation">
+    <title>Economic Truth Engine - Contract & Invoice Reconciliation Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Navigation */
+        nav {
+            background: #fff;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0066cc;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #0066cc;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #0066cc 0%, #004d99 100%);
+            color: #fff;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 0.8rem 1.8rem;
+            border-radius: 0.4rem;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background: #fff;
+            color: #0066cc;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+        
+        .btn-secondary {
+            background: rgba(255,255,255,0.2);
+            color: #fff;
+            border: 2px solid #fff;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        
+        /* Section styling */
+        section {
+            padding: 4rem 2rem;
+        }
+        
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #0066cc;
+            text-align: center;
+        }
+        
+        section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+        
+        /* Problem section */
+        .problem {
+            background: #f9f9f9;
+        }
+        
+        .problem-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .problem-item {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 0.4rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .problem-item h3 {
+            color: #d9534f;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        /* Solution section */
+        .solution {
+            background: #fff;
+        }
+        
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .solution-card {
+            background: #f0f7ff;
+            padding: 2rem;
+            border-radius: 0.4rem;
+            border-left: 4px solid #0066cc;
+        }
+        
+        .solution-card h3 {
+            color: #0066cc;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        /* Features section */
+        .features {
+            background: #f9f9f9;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .feature {
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature h3 {
+            color: #333;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .feature p {
+            color: #777;
+            font-size: 0.95rem;
+        }
+        
+        /* Use cases */
+        .usecases {
+            background: #fff;
+        }
+        
+        .usecases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .usecase {
+            background: #f0f7ff;
+            padding: 1.5rem;
+            border-radius: 0.4rem;
+        }
+        
+        .usecase h3 {
+            color: #0066cc;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        /* Pricing section */
+        .pricing {
+            background: #f9f9f9;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .pricing-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 0.4rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            text-align: center;
+            position: relative;
+        }
+        
+        .pricing-card.featured {
+            border: 2px solid #0066cc;
+            transform: scale(1.05);
+        }
+        
+        .pricing-card h3 {
+            color: #0066cc;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .price {
+            font-size: 2rem;
+            color: #333;
+            margin: 1rem 0;
+            font-weight: 700;
+        }
+        
+        .pricing-card ul {
+            list-style: none;
+            text-align: left;
+            margin: 1.5rem 0;
+        }
+        
+        .pricing-card li {
+            padding: 0.5rem 0;
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        .pricing-card li:before {
+            content: "✓ ";
+            color: #0066cc;
+            font-weight: 700;
+            margin-right: 0.5rem;
+        }
+        
+        /* CTA section */
+        .cta-section {
+            background: #0066cc;
+            color: #fff;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            color: #fff;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+        
+        .cta-section p {
+            color: rgba(255,255,255,0.95);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #999;
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            section h2 {
+                font-size: 1.5rem;
+            }
+            
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">Economic Truth Engine</div>
+            <ul>
+                <li><a href="#product">Product</a></li>
+                <li><a href="#usecases">Use Cases</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Detect Economic Breaks Before They Cost You Money</h1>
+            <p>AI-powered extraction. Deterministic reconciliation. Evidence-backed findings.</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Book a Demo</a>
+                <a href="#product" class="btn btn-secondary">See How It Works</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem" id="product">
+        <div class="container">
+            <h2>The Problem</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Finance and operations teams still reconcile contracts, amendments, and invoices manually. That creates costly inefficiencies.</p>
+            <div class="problem-list">
+                <div class="problem-item">
+                    <h3>🚫 Hidden Overpayments</h3>
+                    <p>Rate and quantity mismatches go undetected, leading to unexpected overpayments or underpayments.</p>
+                </div>
+                <div class="problem-item">
+                    <h3>⏱️ Slow Approvals</h3>
+                    <p>Manual review cycles delay payments and slow down business operations.</p>
+                </div>
+                <div class="problem-item">
+                    <h3>⚖️ Invoice Disputes</h3>
+                    <p>Conflicting data across documents creates disputes and increases operational risk.</p>
+                </div>
+                <div class="problem-item">
+                    <h3>📋 Manual Review</h3>
+                    <p>Teams spend hours manually comparing documents without clear evidence trails.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution">
+        <div class="container">
+            <h2>Our Solution</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Economic Truth Engine helps finance and operations teams automatically detect economic breaks with evidence-backed findings.</p>
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <h3>📄 Parse Documents</h3>
+                    <p>Automatically extract text and structure from contracts, amendments, invoices, and delivery records.</p>
+                </div>
+                <div class="solution-card">
+                    <h3>🔍 Extract Facts</h3>
+                    <p>Use AI and deterministic validation to identify economic facts: rates, quantities, amounts, currencies.</p>
+                </div>
+                <div class="solution-card">
+                    <h3>✓ Validate Evidence</h3>
+                    <p>Normalize and cross-check facts against business rules. Every finding is traceable to source.</p>
+                </div>
+                <div class="solution-card">
+                    <h3>🎯 Reconcile</h3>
+                    <p>Deterministically reconcile contract vs amendment vs invoice. Flag mismatches with proof.</p>
+                </div>
+                <div class="solution-card">
+                    <h3>📊 Surface Findings</h3>
+                    <p>Generate verified findings with full source provenance. No guessing, only evidence.</p>
+                </div>
+                <div class="solution-card">
+                    <h3>🔗 API Ready</h3>
+                    <p>Integrate findings into your workflow. Scale from pilot to production without code changes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>What We Detect</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">💰</div>
+                    <h3>Rate Mismatches</h3>
+                    <p>Detect price differences across contract, amendment, and invoice.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📦</div>
+                    <h3>Quantity Variance</h3>
+                    <p>Identify units and quantities that don't align across documents.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Duplicate Events</h3>
+                    <p>Flag duplicate invoices or amendments that might indicate fraud or error.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💱</div>
+                    <h3>Currency Conflicts</h3>
+                    <p>Detect currency mismatches and unsupported conversions.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🔗</div>
+                    <h3>Missing Evidence</h3>
+                    <p>Surface facts that lack source documentation or provenance.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🔐</div>
+                    <h3>Amendment Conflicts</h3>
+                    <p>Validate amendment approval, timing, and alignment with contracts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="usecases" id="usecases">
+        <div class="container">
+            <h2>Who Benefits</h2>
+            <div class="usecases-grid">
+                <div class="usecase">
+                    <h3>Finance Operations</h3>
+                    <p>Reduce manual reconciliation time and catch mismatches before approval.</p>
+                </div>
+                <div class="usecase">
+                    <h3>Procurement</h3>
+                    <p>Verify supplier invoices against purchase orders and contracts automatically.</p>
+                </div>
+                <div class="usecase">
+                    <h3>Audit & Risk</h3>
+                    <p>Get evidence-backed findings for compliance and dispute resolution.</p>
+                </div>
+                <div class="usecase">
+                    <h3>Project Delivery</h3>
+                    <p>Track amendments and delivery against contract entitlements automatically.</p>
+                </div>
+                <div class="usecase">
+                    <h3>Contract Compliance</h3>
+                    <p>Ensure invoices and amendments comply with contract terms and conditions.</p>
+                </div>
+                <div class="usecase">
+                    <h3>Financial Planning</h3>
+                    <p>Improve forecast accuracy by identifying economic breaks early.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2>Simple Pricing</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Start with a free pilot. Scale to your business needs.</p>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Free Pilot</h3>
+                    <p style="color: #777;">Test with your sample documents</p>
+                    <div class="price">$0</div>
+                    <ul>
+                        <li>3 sample documents</li>
+                        <li>Full pipeline access</li>
+                        <li>2-week trial</li>
+                        <li>Email support</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Start Pilot</a>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>Starter</h3>
+                    <p style="color: #777;">For growing teams</p>
+                    <div class="price">$2,000<span style="font-size: 0.6em; color: #777;">/mo</span></div>
+                    <ul>
+                        <li>Up to 500 documents/mo</li>
+                        <li>API access</li>
+                        <li>Priority support</li>
+                        <li>3 users</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <p style="color: #777;">Custom at scale</p>
+                    <div class="price">Custom</div>
+                    <ul>
+                        <li>Unlimited documents</li>
+                        <li>Dedicated support</li>
+                        <li>Custom integrations</li>
+                        <li>SLA guarantee</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <h2>Ready to Reduce Financial Risk?</h2>
+            <p>Book a demo and see how Economic Truth Engine works with your sample documents.</p>
+            <a href="mailto:hello@economictruthengine.com" class="btn btn-primary">Book a Demo</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Economic Truth Engine. Built for finance teams that need proof before payment.</p>
+            <p style="margin-top: 1rem;">
+                <a href="mailto:hello@economictruthengine.com">Contact</a> | 
+                <a href="#privacy">Privacy</a> | 
+                <a href="#terms">Terms</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

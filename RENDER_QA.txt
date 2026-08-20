@@ -1,0 +1,4 @@
+Mission 006 pilot fixture render QA
+contract: PASS - one page, no clipping/overlap observed
+amendment: PASS - one page, no clipping/overlap observed
+invoice: PASS - one page, no clipping/overlap observed

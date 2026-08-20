@@ -1,0 +1,52 @@
+[
+  {
+    "id": "ADV-001",
+    "description": "Duplicate invoice",
+    "expected_status": "DUPLICATE"
+  },
+  {
+    "id": "ADV-002",
+    "description": "Conflicting rates",
+    "expected_status": "REVIEW_REQUIRED"
+  },
+  {
+    "id": "ADV-003",
+    "description": "Future amendment",
+    "expected_status": "REVIEW_REQUIRED"
+  },
+  {
+    "id": "ADV-004",
+    "description": "Currency conflict",
+    "expected_status": "CURRENCY_CONFLICT"
+  },
+  {
+    "id": "ADV-005",
+    "description": "Hallucinated fact",
+    "expected_status": "REVIEW_REQUIRED"
+  },
+  {
+    "id": "ADV-006",
+    "description": "Missing source",
+    "expected_status": "INSUFFICIENT_EVIDENCE"
+  },
+  {
+    "id": "ADV-007",
+    "description": "Invoice inconsistency",
+    "expected_status": "REVIEW_REQUIRED"
+  },
+  {
+    "id": "ADV-008",
+    "description": "Amendment cancellation",
+    "expected_status": "REVIEW_REQUIRED"
+  },
+  {
+    "id": "ADV-009",
+    "description": "OCR corruption",
+    "expected_status": "REVIEW_REQUIRED"
+  },
+  {
+    "id": "ADV-010",
+    "description": "Duplicate economic event",
+    "expected_status": "DUPLICATE"
+  }
+]

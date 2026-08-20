@@ -1,0 +1,42 @@
+[project]
+name = "economic-truth-engine"
+version = "0.3.0"
+description = "Evidence-backed economic break detector"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+  "fastapi>=0.115,<1",
+  "uvicorn[standard]>=0.34,<1",
+  "pydantic>=2.10,<3",
+  "pydantic-settings>=2.7,<3",
+  "SQLAlchemy>=2.0.50,<2.1",
+  "psycopg[binary]>=3.2,<4",
+  "alembic>=1.16,<2",
+  "python-multipart>=0.0.20,<1",
+  "pypdf>=5.0,<6",
+  "python-docx>=1.1,<2",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3,<9",
+  "httpx>=0.28,<1",
+  "ruff>=0.9,<1",
+]
+docling = [
+  "docling>=2,<3",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["."]
+python_files = ["test_*.py"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["app*"]

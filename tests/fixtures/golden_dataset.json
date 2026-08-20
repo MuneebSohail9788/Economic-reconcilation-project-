@@ -1,0 +1,365 @@
+{
+  "version": "0.1",
+  "cases": [
+    {
+      "id": "TC-001",
+      "category": "rate_mismatch",
+      "expected_status": "RATE_MISMATCH",
+      "source_required": true
+    },
+    {
+      "id": "TC-002",
+      "category": "quantity_mismatch",
+      "expected_status": "QUANTITY_MISMATCH",
+      "source_required": true
+    },
+    {
+      "id": "TC-003",
+      "category": "change_value",
+      "expected_status": "CHANGE_VALUE_NOT_CAPTURED",
+      "source_required": true
+    },
+    {
+      "id": "TC-004",
+      "category": "insufficient_evidence",
+      "expected_status": "INSUFFICIENT_EVIDENCE",
+      "source_required": false
+    },
+    {
+      "id": "TC-005",
+      "category": "currency_conflict",
+      "expected_status": "CURRENCY_CONFLICT",
+      "source_required": true
+    },
+    {
+      "id": "TC-006",
+      "category": "clean",
+      "expected_status": "NO_FINDING",
+      "source_required": true
+    },
+    {
+      "id": "TC-007",
+      "category": "rate_mismatch",
+      "expected_status": "RATE_MISMATCH",
+      "source_required": true
+    },
+    {
+      "id": "TC-008",
+      "category": "quantity_mismatch",
+      "expected_status": "QUANTITY_MISMATCH",
+      "source_required": true
+    },
+    {
+      "id": "TC-009",
+      "category": "change_value",
+      "expected_status": "CHANGE_VALUE_NOT_CAPTURED",
+      "source_required": true
+    },
+    {
+      "id": "TC-010",
+      "category": "insufficient_evidence",
+      "expected_status": "INSUFFICIENT_EVIDENCE",
+      "source_required": false
+    },
+    {
+      "id": "TC-011",
+      "category": "currency_conflict",
+      "expected_status": "CURRENCY_CONFLICT",
+      "source_required": true
+    },
+    {
+      "id": "TC-012",
+      "category": "clean",
+      "expected_status": "NO_FINDING",
+      "source_required": true
+    },
+    {
+      "id": "TC-013",
+      "category": "rate_mismatch",
+      "expected_status": "RATE_MISMATCH",
+      "source_required": true
+    },
+    {
+      "id": "TC-014",
+      "category": "quantity_mismatch",
+      "expected_status": "QUANTITY_MISMATCH",
+      "source_required": true
+    },
+    {
+      "id": "TC-015",
+      "category": "change_value",
+      "expected_status": "CHANGE_VALUE_NOT_CAPTURED",
+      "source_required": true
+    },
+    {
+      "id": "TC-016",
+      "category": "insufficient_evidence",
+      "expected_status": "INSUFFICIENT_EVIDENCE",
+      "source_required": false
+    },
+    {
+      "id": "TC-017",
+      "category": "currency_conflict",
+      "expected_status": "CURRENCY_CONFLICT",
+      "source_required": true
+    },
+    {
+      "id": "TC-018",
+      "category": "clean",
+      "expected_status": "NO_FINDING",
+      "source_required": true
+    },
+    {
+      "id": "TC-019",
+      "category": "rate_mismatch",
+      "expected_status": "RATE_MISMATCH",
+      "source_required": true
+    },
+    {
+      "id": "TC-020",
+      "category": "quantity_mismatch",
+      "expected_status": "QUANTITY_MISMATCH",
+      "source_required": true
+    },
+    {
+      "id": "TC-021",
+      "category": "change_value",
+      "expected_status": "CHANGE_VALUE_NOT_CAPTURED",
+      "source_required": true
+    },
+    {
+      "id": "TC-022",
+      "category": "insufficient_evidence",
+      "expected_status": "INSUFFICIENT_EVIDENCE",
+      "source_required": false
+    },
+    {
+      "id": "TC-023",
+      "category": "currency_conflict",
+      "expected_status": "CURRENCY_CONFLICT",
+      "source_required": true
+    },
+    {
+      "id": "TC-024",
+      "category": "clean",
+      "expected_status": "NO_FINDING",
+      "source_required": true
+    },
+    {
+      "id": "TC-025",
+      "category": "rate_mismatch",
+      "expected_status": "RATE_MISMATCH",
+      "source_required": true
+    },
+    {
+      "id": "TC-026",
+      "category": "quantity_mismatch",
+      "expected_status": "QUANTITY_MISMATCH",
+      "source_required": true
+    },
+    {
+      "id": "TC-027",
+      "category": "change_value",
+      "expected_status": "CHANGE_VALUE_NOT_CAPTURED",
+      "source_required": true
+    },
+    {
+      "id": "TC-028",
+      "category": "insufficient_evidence",
+      "expected_status": "INSUFFICIENT_EVIDENCE",
+      "source_required": false
+    },
+    {
+      "id": "TC-029",
+      "category": "currency_conflict",
+      "expected_status": "CURRENCY_CONFLICT",
+      "source_required": true
+    },
+    {
+      "id": "TC-030",
+      "category": "clean",
+      "expected_status": "NO_FINDING",
+      "source_required": true
+    },
+    {
+      "id": "TC-031",
+      "category": "rate_mismatch",
+      "expected_status": "RATE_MISMATCH",
+      "source_required": true
+    },
+    {
+      "id": "TC-032",
+      "category": "quantity_mismatch",
+      "expected_status": "QUANTITY_MISMATCH",
+      "source_required": true
+    },
+    {
+      "id": "TC-033",
+      "category": "change_value",
+      "expected_status": "CHANGE_VALUE_NOT_CAPTURED",
+      "source_required": true
+    },
+    {
+      "id": "TC-034",
+      "category": "insufficient_evidence",
+      "expected_status": "INSUFFICIENT_EVIDENCE",
+      "source_required": false
+    },
+    {
+      "id": "TC-035",
+      "category": "currency_conflict",
+      "expected_status": "CURRENCY_CONFLICT",
+      "source_required": true
+    },
+    {
+      "id": "TC-036",
+      "category": "clean",
+      "expected_status": "NO_FINDING",
+      "source_required": true
+    },
+    {
+      "id": "TC-037",
+      "category": "rate_mismatch",
+      "expected_status": "RATE_MISMATCH",
+      "source_required": true
+    },
+    {
+      "id": "TC-038",
+      "category": "quantity_mismatch",
+      "expected_status": "QUANTITY_MISMATCH",
+      "source_required": true
+    },
+    {
+      "id": "TC-039",
+      "category": "change_value",
+      "expected_status": "CHANGE_VALUE_NOT_CAPTURED",
+      "source_required": true
+    },
+    {
+      "id": "TC-040",
+      "category": "insufficient_evidence",
+      "expected_status": "INSUFFICIENT_EVIDENCE",
+      "source_required": false
+    },
+    {
+      "id": "TC-041",
+      "category": "currency_conflict",
+      "expected_status": "CURRENCY_CONFLICT",
+      "source_required": true
+    },
+    {
+      "id": "TC-042",
+      "category": "clean",
+      "expected_status": "NO_FINDING",
+      "source_required": true
+    },
+    {
+      "id": "TC-043",
+      "category": "rate_mismatch",
+      "expected_status": "RATE_MISMATCH",
+      "source_required": true
+    },
+    {
+      "id": "TC-044",
+      "category": "quantity_mismatch",
+      "expected_status": "QUANTITY_MISMATCH",
+      "source_required": true
+    },
+    {
+      "id": "TC-045",
+      "category": "change_value",
+      "expected_status": "CHANGE_VALUE_NOT_CAPTURED",
+      "source_required": true
+    },
+    {
+      "id": "TC-046",
+      "category": "insufficient_evidence",
+      "expected_status": "INSUFFICIENT_EVIDENCE",
+      "source_required": false
+    },
+    {
+      "id": "TC-047",
+      "category": "currency_conflict",
+      "expected_status": "CURRENCY_CONFLICT",
+      "source_required": true
+    },
+    {
+      "id": "TC-048",
+      "category": "clean",
+      "expected_status": "NO_FINDING",
+      "source_required": true
+    },
+    {
+      "id": "TC-049",
+      "category": "rate_mismatch",
+      "expected_status": "RATE_MISMATCH",
+      "source_required": true
+    },
+    {
+      "id": "TC-050",
+      "category": "quantity_mismatch",
+      "expected_status": "QUANTITY_MISMATCH",
+      "source_required": true
+    },
+    {
+      "id": "TC-051",
+      "category": "change_value",
+      "expected_status": "CHANGE_VALUE_NOT_CAPTURED",
+      "source_required": true
+    },
+    {
+      "id": "TC-052",
+      "category": "insufficient_evidence",
+      "expected_status": "INSUFFICIENT_EVIDENCE",
+      "source_required": false
+    },
+    {
+      "id": "TC-053",
+      "category": "currency_conflict",
+      "expected_status": "CURRENCY_CONFLICT",
+      "source_required": true
+    },
+    {
+      "id": "TC-054",
+      "category": "clean",
+      "expected_status": "NO_FINDING",
+      "source_required": true
+    },
+    {
+      "id": "TC-055",
+      "category": "rate_mismatch",
+      "expected_status": "RATE_MISMATCH",
+      "source_required": true
+    },
+    {
+      "id": "TC-056",
+      "category": "quantity_mismatch",
+      "expected_status": "QUANTITY_MISMATCH",
+      "source_required": true
+    },
+    {
+      "id": "TC-057",
+      "category": "change_value",
+      "expected_status": "CHANGE_VALUE_NOT_CAPTURED",
+      "source_required": true
+    },
+    {
+      "id": "TC-058",
+      "category": "insufficient_evidence",
+      "expected_status": "INSUFFICIENT_EVIDENCE",
+      "source_required": false
+    },
+    {
+      "id": "TC-059",
+      "category": "currency_conflict",
+      "expected_status": "CURRENCY_CONFLICT",
+      "source_required": true
+    },
+    {
+      "id": "TC-060",
+      "category": "clean",
+      "expected_status": "NO_FINDING",
+      "source_required": true
+    }
+  ]
+}
